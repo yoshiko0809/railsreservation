@@ -27,6 +27,7 @@
             ドロップダウン<%= current_user.user_name %>
           </a>
           <ul class="dropdown-menu">
+            <li><%= link_to  "ダッシュボード", dashboard_path, class: "dropdown-item btn btn-lightt" %></li>
             <li><%= link_to  "ユーザ登録情報編集", edit_user_registration_path, class: "dropdown-item btn btn-light" %></li>
             <li><hr class="dropdown-divider"></li>
             <li><%= link_to  "ログアウト", destroy_user_session_path, method: :delete, class: "dropdown-item btn btn-light" %></li>
