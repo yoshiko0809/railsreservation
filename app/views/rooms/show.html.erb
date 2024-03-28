@@ -25,5 +25,7 @@
   <%= @room.user_id %>
 </p>
 
+ <%= render 'reservations/form' %>
+
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>

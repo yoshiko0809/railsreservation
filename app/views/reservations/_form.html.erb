@@ -1,0 +1,20 @@
+<%= form_for([@room, @room.reservations.new]) do |f| %>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title text-danger h4 font1 mb-4"><strong><span>予約はこちら</span></strong></h5>
+      <div class="row">
+        <div class="col-6">
+          <span class="badge bg-success">チェックイン　</span>
+          <%= f.text_field :start_date, readonly: true, placeholder: "チェックイン", class: "form-control" %>
+        </div>
+        <div class="col-6">
+          <span class="badge bg-primary">チェックアウト</span>
+          <%= f.text_field :end_date, readonly: true, placeholder: "チェックアウト", class: "form-control" %>
+        </div>
+      </div>
+      <div class="mt-4">
+        <%= f.submit "予約する", id: "btn_book", class: "btn btn-danger w-100", disabled: true %>
+      </div>
+    </div>
+  </div>
+<% end %>

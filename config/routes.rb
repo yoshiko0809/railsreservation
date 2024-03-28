@@ -7,6 +7,11 @@ Rails.application.routes.draw do
 
   post '/users/edit', to: 'users#update'
 
+  resources :rooms do
+    resources :reservations
+end
+  resources :reservations, only: [:create]
+
   devise_for :users,
   path: '',
   path_names: {sign_up: 'register', sign_in: 'login', edit: 'profile', sign_out: 'logout'},
