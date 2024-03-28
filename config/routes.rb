@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/dashboard', to: 'users#dashboard'
   get 'pages/home'
+  get '/users/:id', to: 'users#show', as: 'user'
 
   post '/users/edit', to: 'users#update'
 
