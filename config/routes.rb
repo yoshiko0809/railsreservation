@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rooms
   root 'pages#home'
   get '/dashboard', to: 'users#dashboard'
   get 'pages/home'

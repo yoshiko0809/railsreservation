@@ -1,5 +1,8 @@
 class User < ApplicationRecord
+
+  has_many :rooms
   has_one_attached :avatar
+
   validates :user_name, presence: true
 
   # Include default devise modules. Others available are:
